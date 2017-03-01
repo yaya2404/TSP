@@ -33,7 +33,7 @@ public class Map {
 		out.append("<"+listOfCities.length+">\n");
 		
 		for(int i = 0; i < listOfCities.length; i++){
-			
+			out.append("<City "+(i+1)+"> <"+listOfCities[i].getX()+"> <"+listOfCities[i].getY()+">\n");
 		}
 		
 		return out.toString();
