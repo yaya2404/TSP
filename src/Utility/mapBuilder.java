@@ -19,9 +19,9 @@ public class mapBuilder {
 	}
 	
 	public void create10CitiesMaps() throws IOException{
-		File dir = new File("Y:/Downloads/workspace/TSPMaps/Ten/");
+		File dir = new File(".");
 		for(int i = 0; i < numofmaps; i++){
-			File file = new File(dir,"Map"+i+".txt");
+			File file = new File(dir,"Maps/Ten/Map"+(i+1)+".txt");
 			if(!file.exists()){
 				file.createNewFile();
 			}
@@ -32,9 +32,9 @@ public class mapBuilder {
 		}
 	}
 	public void create25CitiesMaps() throws IOException{
-		File dir = new File("Maps/TwentyFive/");
+		File dir = new File(".");
 		for(int i = 0; i < numofmaps; i++){
-			File file = new File(dir,"Map"+i+".txt");
+			File file = new File(dir,"Maps/TwentyFive/Map"+(i+1)+".txt");
 			if(!file.exists()){
 				file.createNewFile();
 			}
@@ -45,9 +45,9 @@ public class mapBuilder {
 		}
 	}
 	public void create50CitiesMaps() throws IOException{
-		File dir = new File("Maps/Fifty/");
+		File dir = new File(".");
 		for(int i = 0; i < numofmaps; i++){
-			File file = new File(dir,"Map"+i+".txt");
+			File file = new File(dir,"Maps/Fifty/Map"+(i+1)+".txt");
 			if(!file.exists()){
 				file.createNewFile();
 			}
@@ -58,9 +58,9 @@ public class mapBuilder {
 		}
 	}
 	public void create100CitiesMaps() throws IOException{
-		File dir = new File("Maps/Hundred/");
+		File dir = new File(".");
 		for(int i = 0; i < numofmaps; i++){
-			File file = new File(dir,"Map"+i+".txt");
+			File file = new File(dir,"Maps/Hundred/Map"+(i+1)+".txt");
 			if(!file.exists()){
 				file.createNewFile();
 			}
