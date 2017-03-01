@@ -57,12 +57,14 @@ public class Map {
 			int cities = Integer.parseInt(breader.readLine().replaceAll("<","").replaceAll(">", ""));
 			String[] input;
 			String line;
-			
+			listOfCities = new Node[cities];
 			for(int i = 0; i < cities; i++){
 				line = breader.readLine();
 				line = line.replaceAll("<", "").replaceAll(">", "");
 				input = line.split(" ");
-				listOfCities[i] = new Node(input[0], Integer.parseInt(input[1]), Integer.parseInt(input[2]));
+				listOfCities[i] = new Node(input[0], 
+						Integer.valueOf(input[1]),
+						Integer.valueOf(input[2]));
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
