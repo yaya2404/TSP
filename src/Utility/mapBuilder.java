@@ -1,6 +1,8 @@
 package Utility;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class mapBuilder {
 
@@ -16,28 +18,56 @@ public class mapBuilder {
 		*/
 	}
 	
-	public void create10CitiesMaps(){
-		File dir = new File("Maps/Ten");
+	public void create10CitiesMaps() throws IOException{
+		File dir = new File("Y:/Downloads/workspace/TSPMaps/Ten/");
 		for(int i = 0; i < numofmaps; i++){
 			File file = new File(dir,"Map"+i+".txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			FileWriter writer = new FileWriter(file);
+			Map map = new Map(10);
+			writer.write(map.toString());
+			writer.close();
 		}
 	}
-	public void create25CitiesMaps(){
-		File dir = new File("Maps/TwentyFive");
+	public void create25CitiesMaps() throws IOException{
+		File dir = new File("Maps/TwentyFive/");
 		for(int i = 0; i < numofmaps; i++){
 			File file = new File(dir,"Map"+i+".txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			FileWriter writer = new FileWriter(file);
+			Map map = new Map(25);
+			writer.write(map.toString());
+			writer.close();
 		}
 	}
-	public void create50CitiesMaps(){
-		File dir = new File("Maps/Fifty");
+	public void create50CitiesMaps() throws IOException{
+		File dir = new File("Maps/Fifty/");
 		for(int i = 0; i < numofmaps; i++){
 			File file = new File(dir,"Map"+i+".txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			FileWriter writer = new FileWriter(file);
+			Map map = new Map(50);
+			writer.write(map.toString());
+			writer.close();
 		}
 	}
-	public void create100CitiesMaps(){
-		File dir = new File("Maps/Hundred");
+	public void create100CitiesMaps() throws IOException{
+		File dir = new File("Maps/Hundred/");
 		for(int i = 0; i < numofmaps; i++){
 			File file = new File(dir,"Map"+i+".txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			FileWriter writer = new FileWriter(file);
+			Map map = new Map(100);
+			writer.write(map.toString());
+			writer.close();
 		}
 	}
 }
