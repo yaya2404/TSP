@@ -11,7 +11,7 @@ import java.util.Random;
 public class Map {
 
 	Node[] listOfCities;
-	
+	int cities;
 	
 	/**
 	 * Used to random generate the location of the cities on the map
@@ -22,7 +22,7 @@ public class Map {
 	public Map(int cities) {
 		// TODO Auto-generated constructor stub
 		listOfCities = new Node[cities];
-		
+		this.cities = cities;
 		ArrayList<Integer> duplicateX = new ArrayList<Integer>();
 		ArrayList<Integer> duplicateY = new ArrayList<Integer>();
 		Random random = new Random();
@@ -54,7 +54,7 @@ public class Map {
 		try {
 			freader = new FileReader(file);
 			breader = new BufferedReader(freader);
-			int cities = Integer.parseInt(breader.readLine().replaceAll("<","").replaceAll(">", ""));
+			cities = Integer.parseInt(breader.readLine().replaceAll("<","").replaceAll(">", ""));
 			String[] input;
 			String line;
 			listOfCities = new Node[cities];
@@ -88,5 +88,11 @@ public class Map {
 		}
 		
 		return out.toString();
+	}
+	public int getNumOfCities(){
+		return this.cities;
+	}
+	public Node[] getListOfCities(){
+		return this.listOfCities;
 	}
 }
