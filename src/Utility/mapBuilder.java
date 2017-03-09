@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class mapBuilder {
+public class MapBuilder {
 
 	private int numofmaps = 25;
 	
-	public mapBuilder() {
+	public MapBuilder() {
 		// TODO Auto-generated constructor stub
 		/*
 		create10CitiesMaps();

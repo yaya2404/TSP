@@ -6,7 +6,7 @@ import java.util.Collections;
 public class Tour {
 	
 	private ArrayList<Node> tour = new ArrayList<Node>();
-	private int distance = 0;
+	private double distance = 0;
 	private Node[] list;
 	
 	public Tour(Map map) {
@@ -39,12 +39,13 @@ public class Tour {
         distance = 0;
     }
     
-    public int getDistance(){
+    public double getDistance(){
         if (distance == 0) {
             int tourDistance = 0;
             for (int cityIndex=0; cityIndex < tourSize(); cityIndex++) {
                 Node fromCity = getCity(cityIndex);
                 Node destinationCity;
+                
                 if(cityIndex+1 < tourSize()){
                     destinationCity = getCity(cityIndex+1);
                 }else{

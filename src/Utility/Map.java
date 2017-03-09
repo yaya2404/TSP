@@ -66,6 +66,15 @@ public class Map {
 						Integer.valueOf(input[1]),
 						Integer.valueOf(input[2]));
 			}
+			//pre-computes the cost of edges to each city
+			for(int i = 0; i < cities; i++){
+				listOfCities[i].initEdgeCostList(cities);
+				for(int j = i; j < cities; j++){
+					if(i != j){
+						listOfCities[i].setEdgeCost(j, listOfCities[i].calculateDistance(listOfCities[j]));
+					}
+				}
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
